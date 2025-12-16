@@ -1,13 +1,10 @@
 'use strict';
 
-
-
 /**
  * PRELOAD
  * 
  * loading will be end after document is loaded
  */
-
 const preloader = document.querySelector("[data-preaload]");
 
 window.addEventListener("load", function () {
@@ -15,24 +12,18 @@ window.addEventListener("load", function () {
   document.body.classList.add("loaded");
 });
 
-
-
 /**
  * add event listener on multiple elements
  */
-
 const addEventOnElements = function (elements, eventType, callback) {
   for (let i = 0, len = elements.length; i < len; i++) {
     elements[i].addEventListener(eventType, callback);
   }
 }
 
-
-
 /**
  * NAVBAR
  */
-
 const navbar = document.querySelector("[data-navbar]");
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const overlay = document.querySelector("[data-overlay]");
@@ -45,12 +36,9 @@ const toggleNavbar = function () {
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
 
-
-
 /**
  * HEADER & BACK TOP BTN
  */
-
 const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
 
@@ -63,7 +51,6 @@ const hideHeader = function () {
   } else {
     header.classList.remove("hide");
   }
-
   lastScrollPos = window.scrollY;
 }
 
@@ -78,12 +65,9 @@ window.addEventListener("scroll", function () {
   }
 });
 
-
-
 /**
  * HERO SLIDER
  */
-
 const heroSlider = document.querySelector("[data-hero-slider]");
 const heroSliderItems = document.querySelectorAll("[data-hero-slider-item]");
 const heroSliderPrevBtn = document.querySelector("[data-prev-btn]");
@@ -104,7 +88,6 @@ const slideNext = function () {
   } else {
     currentSlidePos++;
   }
-
   updateSliderPos();
 }
 
@@ -116,7 +99,6 @@ const slidePrev = function () {
   } else {
     currentSlidePos--;
   }
-
   updateSliderPos();
 }
 
@@ -125,7 +107,6 @@ heroSliderPrevBtn.addEventListener("click", slidePrev);
 /**
  * auto slide
  */
-
 let autoSlideInterval;
 
 const autoSlide = function () {
@@ -142,18 +123,14 @@ addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseout", autoSlide
 
 window.addEventListener("load", autoSlide);
 
-
-
 /**
  * PARALLAX EFFECT
  */
-
 const parallaxItems = document.querySelectorAll("[data-parallax-item]");
 
 let x, y;
 
 window.addEventListener("mousemove", function (event) {
-
   x = (event.clientX / window.innerWidth * 10) - 5;
   y = (event.clientY / window.innerHeight * 10) - 5;
 
@@ -162,9 +139,39 @@ window.addEventListener("mousemove", function (event) {
   y = y - (y * 2);
 
   for (let i = 0, len = parallaxItems.length; i < len; i++) {
-    x = x * Number(parallaxItems[i].dataset.parallaxSpeed);
-    y = y * Number(parallaxItems[i].dataset.parallaxSpeed);
-    parallaxItems[i].style.transform = `translate3d(${x}px, ${y}px, 0px)`;
+    const speed = Number(parallaxItems[i].dataset.parallaxSpeed);
+    parallaxItems[i].style.transform = `translate3d(${x * speed}px, ${y * speed}px, 0px)`;
   }
+});
 
+/**
+ * NAVBAR ACTIVE LINK (click & scroll)
+ */
+const navbarLinks = document.querySelectorAll('.navbar-link');
+const sections = document.querySelectorAll('section[id]');
+
+// On click: highlight link
+navbarLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navbarLinks.forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+  });
+});
+
+// On scroll: highlight link based on section in view
+window.addEventListener('scroll', () => {
+  const scrollPos = window.scrollY + 200; // offset
+  sections.forEach(section => {
+    const top = section.offsetTop;
+    const bottom = top + section.offsetHeight;
+    const id = section.getAttribute('id');
+    if (scrollPos >= top && scrollPos < bottom) {
+      navbarLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${id}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+  });
 });

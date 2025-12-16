@@ -691,6 +691,7 @@ body.nav-active { overflow: hidden; }
 .navbar .logo {
   max-width: max-content;
   margin-inline: auto;
+  height: 20px;
   margin-block-end: 60px;
 }
 

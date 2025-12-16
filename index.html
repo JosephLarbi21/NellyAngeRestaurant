@@ -18,7 +18,7 @@
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./fav.png" type="">
 
   <!-- 
     - google font link
@@ -112,12 +112,12 @@
     - #HEADER
   -->
 
- <header class="header" data-header>
+<header class="header" data-header>
   <div class="container">
 
     <!-- Logo -->
     <a href="#" class="logo">
-      <img src="./assets/images/logo.svg" width="160" height="50" alt="Nelly Ange - Home">
+      <img src="./assets/images/LOGO.png" width="160" height="50" alt="Nelly Ange - Home">
     </a>
 
     <!-- Navbar -->
@@ -131,7 +131,7 @@
       <!-- Navbar links -->
       <ul class="navbar-list">
         <li class="navbar-item">
-          <a href="#home" class="navbar-link hover-underline active">
+          <a href="#home" class="navbar-link hover-underline">
             <span>Home</span>
           </a>
         </li>
@@ -146,12 +146,12 @@
           </a>
         </li>
         <li class="navbar-item">
-          <a href="#chefs" class="navbar-link hover-underline">
-            <span>Our Chefs</span>
+          <a href="#events" class="navbar-link hover-underline">
+            <span>Events</span>
           </a>
         </li>
         <li class="navbar-item">
-          <a href="#contact" class="navbar-link hover-underline">
+          <a href="#reservation" class="navbar-link hover-underline">
             <span>Contact</span>
           </a>
         </li>
@@ -221,7 +221,7 @@
               Come with family & feel the joy of mouthwatering food
             </p>
 
-            <a href="#" class="btn btn-primary slider-reveal">
+            <a href="#menu" class="btn btn-primary slider-reveal">
               <span class="text text-1">View Our Menu</span>
 
               <span class="text text-2" aria-hidden="true">View Our Menu</span>
@@ -246,7 +246,7 @@
               Come with family & feel the joy of mouthwatering food
             </p>
 
-            <a href="#" class="btn btn-primary slider-reveal">
+            <a href="#menu" class="btn btn-primary slider-reveal">
               <span class="text text-1">View Our Menu</span>
 
               <span class="text text-2" aria-hidden="true">View Our Menu</span>
@@ -271,7 +271,7 @@
               Come with family & feel the joy of mouthwatering food
             </p>
 
-            <a href="#" class="btn btn-primary slider-reveal">
+            <a href="#menu" class="btn btn-primary slider-reveal">
               <span class="text text-1">View Our Menu</span>
 
               <span class="text text-2" aria-hidden="true">View Our Menu</span>
@@ -289,7 +289,7 @@
           <ion-icon name="chevron-forward"></ion-icon>
         </button>
 
-        <a href="#" class="hero-btn has-after">
+        <a href="#reservation" class="hero-btn has-after">
           <img src="./assets/images/hero-icon.png" width="48" height="48" alt="booking icon">
 
           <span class="label-2 text-center span">Book A Table</span>
@@ -335,7 +335,7 @@
                     <a href="#">Breakfast</a>
                   </h3>
 
-                  <a href="#" class="btn-text hover-underline label-2">View Menu</a>
+                  <a href="#menu" class="btn-text hover-underline label-2">View Menu</a>
 
                 </div>
 
@@ -358,7 +358,7 @@
                     <a href="#">Appetizers</a>
                   </h3>
 
-                  <a href="#" class="btn-text hover-underline label-2">View Menu</a>
+                  <a href="#menu" class="btn-text hover-underline label-2">View Menu</a>
 
                 </div>
 
@@ -381,7 +381,7 @@
                     <a href="#">Drinks</a>
                   </h3>
 
-                  <a href="#" class="btn-text hover-underline label-2">View Menu</a>
+                  <a href="#menu" class="btn-text hover-underline label-2">View Menu</a>
 
                 </div>
 
@@ -489,7 +489,7 @@
               <span class="span body-1">₵20.00</span>
             </div>
 
-            <a href="#" class="btn btn-primary">
+            <a href="#menu" class="btn btn-primary">
               <span class="text text-1">View All Menu</span>
 
               <span class="text text-2" aria-hidden="true">View All Menu</span>
@@ -645,7 +645,7 @@
 
                   <div class="title-wrapper">
                     <h3 class="title-3">
-                      <a href="#" class="card-title">Olivas Rellenas</a>
+                      <a href="#" class="card-title">Rice with stew</a>
                     </h3>
 
                     <span class="span title-2">₵25.00</span>
@@ -690,14 +690,10 @@
           </ul>
 
           <p class="menu-text text-center">
-            During winter daily from <span class="span">7:00 pm</span> to <span class="span">9:00 pm</span>
+           We open daily from <span class="span">7:00 pm</span> to <span class="span">9:00 pm</span>
           </p>
 
-          <a href="#" class="btn btn-primary">
-            <span class="text text-1">View All Menu</span>
-
-            <span class="text text-2" aria-hidden="true">View All Menu</span>
-          </a>
+          
 
           <img src="./assets/images/shape-5.png" width="921" height="1036" loading="lazy" alt="shape"
             class="shape shape-2 move-anim">
@@ -716,7 +712,7 @@
       -->
 
       <section class="section testi text-center has-bg-image"
-        style="background-image: url('./assets/images/testimonial-bg.jpg')" aria-label="testimonials">
+        style="background-image: url('./assets/images/testimonial-bg.jpg')" aria-label="testimonials" id="testimonial">
         <div class="container">
 
           <div class="quote">”</div>
@@ -750,7 +746,7 @@
         - #RESERVATION
       -->
 
-      <section class="reservation">
+      <section class="reservation" id="reservation">
         <div class="container">
 
           <div class="form reservation-form bg-black-10">
@@ -845,8 +841,7 @@
               <p class="contact-label">Location</p>
 
               <address class="body-4">
-                Blue Gate, Delicious City, <br>
-                London 9578, UK
+                Nelly Ange, Osu Accra
               </address>
 
               <p class="contact-label">Lunch Time</p>
@@ -878,7 +873,7 @@
         - #FEATURES
       -->
 
-      <section class="section features text-center" aria-label="features">
+      <section class="section features text-center" aria-label="features" id="features">
         <div class="container">
 
           <p class="section-subtitle label-2">Why Choose Us</p>
@@ -962,7 +957,7 @@
         - #EVENT
       -->
 
-      <section class="section event bg-black-10" aria-label="event">
+      <section class="section event bg-black-10" aria-label="event" id="events">
         <div class="container">
 
           <p class="section-subtitle label-2 text-center">Recent Updates</p>
@@ -1036,11 +1031,7 @@
 
           </ul>
 
-          <a href="#" class="btn btn-primary">
-            <span class="text text-1">View Our Blog</span>
-
-            <span class="text text-2" aria-hidden="true">View Our Blog</span>
-          </a>
+         
 
         </div>
       </section>
@@ -1065,11 +1056,11 @@
         <div class="footer-brand has-before has-after">
 
           <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" width="160" height="50" loading="lazy" alt="Nelly Ange home">
+            <img src="./assets/images/LOGO.png" width="160" height="50" loading="lazy" alt="Nelly Ange home">
           </a>
 
           <address class="body-4">
-            Blue Gate, Delicious City, London 9578, UK
+            Nelly Ange, Osu Accra
           </address>
 
           <a href="mailto:nellyange20@gmail.com" class="body-4 contact-link">nellyange20@gmail.com</a>
@@ -1115,19 +1106,19 @@
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Menus</a>
+            <a href="#menu" class="label-2 footer-link hover-underline">Menus</a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">About Us</a>
+            <a href="#about" class="label-2 footer-link hover-underline">About Us</a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Our Chefs</a>
+            <a href="#events" class="label-2 footer-link hover-underline">Events</a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Contact</a>
+            <a href="#reservation" class="label-2 footer-link hover-underline">Contact</a>
           </li>
 
         </ul>
@@ -1143,11 +1134,11 @@
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Twitter</a>
+            <a href="#" class="label-2 footer-link hover-underline">X</a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Youtube</a>
+            <a href="#" class="label-2 footer-link hover-underline">Tiktok</a>
           </li>
 
           <li>
@@ -1161,9 +1152,7 @@
       <div class="footer-bottom">
 
         <p class="copyright">
-          &copy; 2025 Nelly Ange. All Rights Reserved | Crafted by <a href="https://github.com/codewithsadee"
-            target="_blank" class="link">codewithsadee</a>
-        </p>
+          &copy; 2025 Nelly Ange Original Blue Gate Restaurant. All Rights Reserved 
 
       </div>
 
